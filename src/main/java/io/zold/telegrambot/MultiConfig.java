@@ -33,8 +33,8 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 /**
- * Configuration options from ini file and command line arguments
- * Command line arguments has a priority above the ini file
+ * Configuration options combined from properties file and command line arguments
+ * Command line arguments has a priority above the properties file
  *
  * @author Ilya Pokolev (pin2t@mail.ru)
  * @version $
@@ -45,6 +45,9 @@ public final class MultiConfig {
     private final Properties ini = new Properties();
     private final Map<String, String> args;
 
+    /**
+     * @todo add suffizes support for update interval, like 30s, 10m, 1h
+     */
     public MultiConfig(final String[] args) {
         this.args = this.parseKV(args);
         if (this.args.containsKey("config"))

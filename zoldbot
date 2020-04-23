@@ -1,0 +1,14 @@
+#!/bin/bash
+
+if [ "$OSTYPE" == "linux-gnu" ]; then
+    JAVA_HOME=/usr/lib/jvm/java-1.11.0-openjdk-amd64
+    J2SDKDIR=/usr/lib/jvm/java-1.11.0-openjdk-amd64
+    $JAVA_HOME/bin/java -jar target/zoldbot.jar "$@"
+elif [[ $OSTYPE == "darwin"* ]]; then
+    JAVA_HOME=/Library/Java/JavaVirtualMachines/graalvm-ce-java11-19.3.0/Contents/Home
+    J2SDKDIR=/Library/Java/JavaVirtualMachines/graalvm-ce-java11-19.3.0/Contents/Home
+    JDKHOME=/Library/Java/JavaVirtualMachines/graalvm-ce-java11-19.3.0/Contents/Home
+    $JAVA_HOME/bin/java -jar target/zoldbot.jar "$@"
+else
+    echo $OSTYPE not known
+fi
