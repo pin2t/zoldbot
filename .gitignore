@@ -1,0 +1,9 @@
+target/tg-bot-1.0-SNAPSHOT.jar
+target/zoldbot.jar
+target/classes/logging.properties
+target/classes/io/zold/telegrambot/App.class
+target/classes/io/zold/telegrambot/MultiConfig.class
+target/classes/io/zold/telegrambot/MultiConfig$1.class
+target/maven-archiver/pom.properties
+target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst
+target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst
